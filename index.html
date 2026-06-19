@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mst. Tanjilla Tabassum Tarin</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">TARIN<span class="dot">.</span></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#dossier" class="nav-link">Research Dossier</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <span class="badge">FINANCIAL ANALYTICS &amp; REPLICABLE QUANT RESEARCH</span>
+      <h1>Mst. Tanjilla<br>Tabassum Tarin</h1>
+      <p class="subtitle">BBA Student at <strong>United International University (UIU)</strong></p>
+      <p class="description">
+        Applying advanced Python pipelines, econometric modeling, and machine
+        learning architectures for corporate diagnostics and risk management
+        overlays.
+      </p>
+      <a href="#dossier" class="cta">View Research Dossier</a>
+    </div>
+
+    <div class="hero-image">
+      <!-- Replace the src below with your own photo (e.g. "images/profile.jpg") -->
+      <img id="profilePic" src="profile-tarin.jpeg" alt="Mst. Tanjilla Tabassum Tarin">
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="section-inner">
+      <p class="eyebrow">About</p>
+      <h2 class="section-title">A bit about me</h2>
+      <p class="section-sub">Quick overview of who I am and what I work on.</p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a BBA student at United International University (UIU) focused
+            on financial analytics and quantitative research. I enjoy turning
+            messy financial data into clear, replicable insights using Python
+            and statistical modeling.
+          </p>
+          <p>
+            My work centers on corporate diagnostics, econometric modeling,
+            and building machine learning overlays to support risk management
+            decisions. I care about research that is transparent and easy for
+            others to reproduce.
+          </p>
+        </div>
+
+        <div class="skills-box">
+          <h3>Tools &amp; Skills</h3>
+          <div class="skill-tags">
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>Econometrics</span>
+            <span>Machine Learning</span>
+            <span>Excel</span>
+            <span>Risk Modeling</span>
+            <span>Power BI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESEARCH DOSSIER / PROJECTS ===================== -->
+  <section id="dossier">
+    <div class="section-inner">
+      <p class="eyebrow">Research Dossier</p>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">A collection of research projects and analyses. Add a new card for each project.</p>
+
+      <div class="project-grid">
+
+        <!-- Project card 1 -->
+        <div class="project-card">
+          <div class="project-image-placeholder">
+            <!-- Add your screenshot here (e.g., <img src="screenshot1.png" alt="Square Pharma Dataset">) -->
+            <span>+ Add Screenshot</span>
+          </div>
+          <div class="project-content">
+            <span class="project-tag">Data Engineering & Analytics</span>
+            <h3>Square Pharmaceuticals Ltd. Analytics Dataset</h3>
+            <p style="margin-bottom: 10px;">Built a monthly analytics-ready dataset combining Yahoo Finance stock data, firm-level variables, and World Bank API macro data.</p>
+            <ul style="color: var(--text-muted); font-size: 0.9rem; margin-left: 20px; margin-bottom: 20px;">
+              <li>60 monthly rows, 12 variables, 2020–2024</li>
+              <li>Alignment rule: Annual firm data matched to monthly observations</li>
+              <li>Quality checks: Missing values treated, data dictionary documented</li>
+            </ul>
+            <p style="font-size: 0.85rem; margin-bottom: 25px;"><strong>Tools:</strong> Python, pandas, yfinance, World Bank API, openpyxl, Jupyter</p>
+            <a href="#" class="project-link">View Dataset →</a>
+          </div>
+        </div>
+
+        <!-- Project card 2 -->
+        <div class="project-card">
+          <div class="project-image-placeholder">
+            <!-- Add your GARCH volatility plot here -->
+            <span>+ Add GARCH Plot Image</span>
+          </div>
+          <div class="project-content">
+            <span class="project-tag">Risk Modeling</span>
+            <h3>NVDA GARCH(1,1) Volatility Forecasting</h3>
+            <p style="margin-bottom: 10px;">ARIMA(2,0,3) + GARCH(1,1) model on daily log returns classifying the asset as <strong>HIGH RISK</strong>.</p>
+            <ul style="color: var(--text-muted); font-size: 0.9rem; margin-left: 20px; margin-bottom: 20px;">
+              <li>Annualized volatility: 41.56%</li>
+              <li>30-day forecast: 49.19%</li>
+              <li>Key finding: NVDA carries significantly elevated risk and is unsuitable for low-risk portfolios</li>
+            </ul>
+            <p style="font-size: 0.85rem; margin-bottom: 25px;"><strong>Tools:</strong> Python, arch, statsmodels, pmdarima, Matplotlib, python-docx</p>
+            <a href="#" class="project-link">View Risk Memo →</a>
+          </div>
+        </div>
+
+        <!-- Project card 3 -->
+        <div class="project-card">
+          <div class="project-image-placeholder">
+            <!-- Add your forecasting plot here -->
+            <span>+ Add Forecast Plot Image</span>
+          </div>
+          <div class="project-content">
+            <span class="project-tag">Machine Learning</span>
+            <h3>NVDA ARIMA vs LSTM Return Forecasting</h3>
+            <p style="margin-bottom: 10px;">Compared traditional econometric time-series models with advanced deep learning architectures to forecast NVDA daily returns.</p>
+            <ul style="color: var(--text-muted); font-size: 0.9rem; margin-left: 20px; margin-bottom: 20px;">
+              <li>Evaluated ARIMA predictive accuracy</li>
+              <li>Implemented LSTM neural networks</li>
+              <li>Performance benchmarking and backtesting</li>
+            </ul>
+            <p style="font-size: 0.85rem; margin-bottom: 25px;"><strong>Tools:</strong> Python, TensorFlow/Keras, statsmodels</p>
+            <a href="#" class="project-link">View Analysis →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="section-inner">
+      <p class="eyebrow">Contact</p> 
+      <h2 class="section-title">Let's connect</h2>
+      <p class="section-sub">Feel free to reach out for collaboration, research, or just a conversation.</p>
+
+      <div class="contact-grid">
+        <ul class="contact-list">
+          <li><a href="mailto:tanjillatabassumtarin@gmail.com">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Email me
+          </a></li>
+          <li><a href="https://www.linkedin.com/in/mst-tanjilla-tabassum-tarin-3a5b77298/" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            LinkedIn
+          </a></li>
+          <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            GitHub
+          </a></li>
+          <li><a href="https://maps.google.com/?q=Dhaka,Bangladesh" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Dhaka, Bangladesh
+          </a></li>
+        </ul>
+
+        <form class="contact-form" action="https://formsubmit.co/tanjillatabassumtarin@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New message from your Portfolio!">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Mst. Tanjilla Tabassum Tarin. All rights reserved.
+  </footer>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+  });
+
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+    });
+  });
+
+  // Highlight active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+
+  sections.forEach(sec => observer.observe(sec));
+</script>
+
+</body>
+</html>

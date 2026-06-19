@@ -7,6 +7,16 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Global SVG Defs for Gradients -->
+  <svg width="0" height="0" style="position:absolute; width:0; height:0;">
+    <defs>
+      <linearGradient id="rgb-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#38bdf8" />
+        <stop offset="50%" stop-color="#a855f7" />
+        <stop offset="100%" stop-color="#ec4899" />
+      </linearGradient>
+    </defs>
+  </svg>
 
   <header>
     <div class="logo">TARIN<span class="dot">.</span></div>
@@ -16,7 +26,9 @@
     <nav id="mainNav">
       <ul>
         <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#dossier" class="nav-link">Research Dossier</a></li>
+        <li><a href="#disclosure" class="nav-link">AI Disclosure</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
@@ -26,14 +38,24 @@
   <section class="hero" id="hero">
     <div class="hero-text">
       <span class="badge">FINANCIAL ANALYTICS &amp; REPLICABLE QUANT RESEARCH</span>
-      <h1><span style="font-size: 0.5em; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 5px; -webkit-text-fill-color: var(--text-muted);">Hello, I am</span>Mst. Tanjilla<br>Tabassum Tarin</h1>
+      <h1><span style="font-size: 0.5em; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 5px; -webkit-text-fill-color: var(--text-muted);">Hello, I am</span><span style="background: var(--rgb-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Mst. Tanjilla<br>Tabassum Tarin</span></h1>
       <p class="subtitle">BBA Student at <strong>United International University (UIU)</strong></p>
       <p class="description">
         Applying advanced Python pipelines, econometric modeling, and machine
         learning architectures for corporate diagnostics and risk management
         overlays.
       </p>
-      <a href="#dossier" class="cta">View Research Dossier</a>
+      <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+        <a href="#dossier" class="cta">View Research Dossier</a>
+        <div class="hero-socials" style="display: flex; gap: 15px;">
+          <a href="mailto:tanjillatabassumtarin@gmail.com" class="social-icon" aria-label="Email" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/mst-tanjilla-tabassum-tarin-3a5b77298/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="hero-image">
@@ -44,42 +66,115 @@
 
   <!-- ===================== ABOUT ===================== -->
   <section id="about">
-    <div class="section-inner">
-      <p class="eyebrow">About</p>
-      <h2 class="section-title">A bit about me</h2>
-      <p class="section-sub">Quick overview of who I am and what I work on.</p>
-
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            I'm a BBA student at United International University (UIU) focused
-            on financial analytics and quantitative research. I enjoy turning
-            messy financial data into clear, replicable insights using Python
-            and statistical modeling.
-          </p>
-          <p>
-            My work centers on corporate diagnostics, econometric modeling,
-            and building machine learning overlays to support risk management
-            decisions. I care about research that is transparent and easy for
-            others to reproduce.
-          </p>
+    <div class="section-inner" style="max-width: 1200px;">
+      <div class="about-split">
+        
+        <!-- Left Side: Text content -->
+        <div class="about-left">
+          <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+            <div style="width: 40px; height: 2px; background: var(--accent);"></div>
+            <p class="eyebrow" style="margin: 0; text-align: left; letter-spacing: 2px; color: var(--accent);">About Me</p>
+          </div>
+          
+          <h2 style="font-size: 3rem; line-height: 1.1; font-weight: 800; margin-bottom: 30px; background: var(--rgb-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Turning Data into<br>Financial Insight</h2>
+          
+          <div class="about-text" style="color: var(--text-muted); font-size: 1.05rem;">
+            <p style="margin-bottom: 20px;">I am a <strong style="color: var(--text-main);">BBA Finance student</strong> at United International University (UIU). I am building applied expertise in Python-based financial analytics, time-series modeling, and investment risk forecasting.</p>
+            <p style="margin-bottom: 20px;">Across three project cycles in FIN 4333 - Financial Analytics, I worked as a member of <strong style="color: var(--text-main);">Team Tornedo</strong> — focusing on everything from raw data acquisition and cleaning to model building, evaluation, and professional memo writing.</p>
+            <p>I am particularly interested in using <strong style="color: var(--accent);">reproducible analytics workflows</strong> to support investment decisions, corporate finance analysis, and equity risk assessment.</p>
+          </div>
         </div>
 
-        <div class="skills-box">
-          <h3>Tools &amp; Skills</h3>
-          <div class="skill-tags">
-            <span>Python</span>
-            <span>Pandas</span>
-            <span>Econometrics</span>
-            <span>ARIMA Modeling</span>
-            <span>Stationary Testing (ADF)</span>
-            <span>GARCH(1,1) Optimization</span>
-            <span>LSTM Neural Networks</span>
-            <span>Time-Series Analysis</span>
-            <span>Machine Learning</span>
-            <span>Excel</span>
-            <span>Risk Modeling</span>
-            <span>Power BI</span>
+        <!-- Right Side: Info Cards -->
+        <div class="about-info-grid">
+          
+          <div class="info-card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#rgb-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px;">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            <span class="info-label">EDUCATION</span>
+            <p>BBA Finance — United International University</p>
+          </div>
+
+          <div class="info-card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#rgb-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px;">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span class="info-label">LOCATION</span>
+            <p>Dhaka, Bangladesh</p>
+          </div>
+
+          <div class="info-card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#rgb-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px;">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline>
+            </svg>
+            <span class="info-label">CAREER INTEREST</span>
+            <p>Financial Modeling · Market Forecasting</p>
+          </div>
+
+          <div class="info-card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#rgb-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px;">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span class="info-label">COURSE</span>
+            <p>FIN 4333 - Financial Analytics</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TECHNICAL SKILLS ===================== -->
+  <section id="skills" style="background: #0B1121;">
+    <div class="section-inner" style="max-width: 900px; padding: 100px 60px;">
+      
+      <p class="eyebrow">Technical Skills</p>
+      <h2 class="section-title">Data &amp; Modeling Skills</h2>
+      <p class="section-sub">A complete toolkit built through hands-on financial analytics projects.</p>
+
+      <div class="tech-skills-grid">
+        <!-- Card 1 -->
+        <div class="tech-card">
+          <div class="tech-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+            <h3>Programming &amp; Data</h3>
+          </div>
+          <div class="tech-tags">
+            <span>Python</span><span>Pandas</span><span>NumPy</span><span>yfinance</span><span>OpenPyXL</span><span>Matplotlib</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="tech-card">
+          <div class="tech-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            <h3>Financial Modeling</h3>
+          </div>
+          <div class="tech-tags">
+            <span>GARCH(1,1)</span><span>ARIMA</span><span>LSTM</span><span>Volatility Forecasting</span><span>Time-Series</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="tech-card">
+          <div class="tech-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            <h3>Model Evaluation</h3>
+          </div>
+          <div class="tech-tags">
+            <span>MAE</span><span>RMSE</span><span>Directional Accuracy</span><span>Backtesting</span><span>Cross-Validation</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="tech-card">
+          <div class="tech-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            <h3>Office &amp; Productivity</h3>
+          </div>
+          <div class="tech-tags">
+            <span>Microsoft Word</span><span>Microsoft Excel</span><span>PowerPoint</span><span>Microsoft Access</span>
           </div>
         </div>
       </div>
@@ -111,16 +206,16 @@
               <li>Quality checks: Missing values treated, data dictionary documented</li>
             </ul>
             <p style="font-size: 0.85rem; margin-bottom: 25px;"><strong>Tools:</strong> Python, pandas, yfinance, World Bank API, openpyxl, Jupyter</p>
-            <a href="assets/Project 1.zip" class="project-link">View Dataset →</a>
+            <a href="assets/Project%201.zip" class="project-link">View Dataset →</a>
           </div>
         </div>
 
         <!-- Project card 2 -->
         <div class="project-card">
-          <!-- <div class="project-image-placeholder">
+          <!-- <div class="project-image-placeholder"> -->
             <!-- Add your GARCH volatility plot here -->
             <!-- <span>+ Add GARCH Plot Image</span>
-          </div> --> 
+          </div> -->
           <div class="project-content">
             <span class="project-tag">Risk Modeling</span>
             <h3>NVDA GARCH(1,1) Volatility Forecasting</h3>
@@ -131,7 +226,7 @@
               <li>Key finding: NVDA carries significantly elevated risk and is unsuitable for low-risk portfolios</li>
             </ul>
             <p style="font-size: 0.85rem; margin-bottom: 25px;"><strong>Tools:</strong> Python, arch, statsmodels, pmdarima, Matplotlib, python-docx</p>
-            <a href="assets/Team Tornado (Project 2) TESLA.zip" class="project-link">View Risk Memo →</a>
+            <a href="assets/Team%20Tornado%20(Project%202)%20TESLA.zip" class="project-link">View Risk Memo →</a>
           </div>
         </div>
 
@@ -151,10 +246,32 @@
               <li>Performance benchmarking and backtesting</li>
             </ul>
             <p style="font-size: 0.85rem; margin-bottom: 25px;"><strong>Tools:</strong> Python, TensorFlow/Keras, statsmodels</p>
-            <a href="assets/Project 3.zip" class="project-link">View Analysis →</a>
+            <a href="assets/Project%203.zip" class="project-link">View Analysis →</a>
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AI DISCLOSURE ===================== -->
+  <section id="disclosure">
+    <div class="section-inner" style="max-width: 900px;">
+      <p class="eyebrow" style="color: #ec4899;">TRANSPARENCY</p>
+      <h2 class="section-title" style="background: var(--rgb-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AI Disclosure</h2>
+
+      <div class="info-card" style="margin-top: 40px; padding: 40px; text-align: center; border: 1px solid rgba(255,255,255,0.05); background: rgba(30, 41, 59, 0.6);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FF7A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 20px;">
+          <rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" y1="16" x2="8.01" y2="16"></line><line x1="16" y1="16" x2="16.01" y2="16"></line>
+        </svg>
+        <h3 style="margin-bottom: 30px; font-size: 1.3rem; font-weight: 700; color: var(--text-main);">AI-Assisted Workflow</h3>
+        
+        <p style="text-align: left; color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+          This portfolio and the associated analysis utilized Claude (Anthropic) for initial code drafting and report structuring. Specifically, AI was used as an analytical assistant throughout the project workflow.
+        </p>
+        <p style="text-align: left; color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 0;">
+          All data cleaning, mathematical verification, and final qualitative conclusions were <strong style="color: #FF7A00;">manually reviewed and validated by Mst. Tanjilla Tabassum Tarin</strong> to ensure technical accuracy, academic integrity, and compliance with the responsible AI guidelines of UIU.
+        </p>
       </div>
     </div>
   </section>
@@ -167,24 +284,26 @@
       <p class="section-sub">Feel free to reach out for collaboration, research, or just a conversation.</p>
 
       <div class="contact-grid">
-        <ul class="contact-list">
-          <li><a href="mailto:tanjillatabassumtarin@gmail.com">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            Email me
-          </a></li>
-          <li><a href="https://www.linkedin.com/in/mst-tanjilla-tabassum-tarin-3a5b77298/" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            LinkedIn
-          </a></li>
-          <li><a href="https://github.com/tanjillatabassumtarin-cpu" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            GitHub
-          </a></li>
-          <li><a href="https://maps.google.com/?q=Dhaka,Bangladesh" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            Dhaka, Bangladesh
-          </a></li>
-        </ul>
+        <div class="contact-info-box">
+          <ul class="contact-list">
+            <li><a href="mailto:tanjillatabassumtarin@gmail.com">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Email me
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/mst-tanjilla-tabassum-tarin-3a5b77298/" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              LinkedIn
+            </a></li>
+            <li><a href="https://github.com/tanjillatabassumtarin-cpu" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              GitHub
+            </a></li>
+            <li><a href="https://maps.google.com/?q=Dhaka,Bangladesh" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Dhaka, Bangladesh
+            </a></li>
+          </ul>
+        </div>
 
         <form class="contact-form" action="https://formsubmit.co/tanjillatabassumtarin@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="New message from your Portfolio!">
